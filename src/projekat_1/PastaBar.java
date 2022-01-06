@@ -26,4 +26,13 @@ public class PastaBar {
 			return 16;}
 		else {return 17;}
 	}
+	public static boolean musterije (String [] stalneMusterije, String brojTelefona) {
+		for (int i = 0; i < stalneMusterije.length; i++) {
+			if (stalneMusterije[i].equals(brojTelefona)) {
+				return true;
+			}
+		}
+		return false;
+		
+	}
 }
