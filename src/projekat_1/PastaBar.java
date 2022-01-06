@@ -2,7 +2,7 @@ package projekat_1;
 
 import java.util.Scanner;
 
-public class pasta_bar {
+public class PastaBar {
 
 	public static void main(String[] args) {
 		
@@ -16,5 +16,14 @@ public class pasta_bar {
 		"Napolitana", "Povrce mix", "Pecurke", "Kutija"};
 		int [] cene = {50, 60, 120, 120, 140, 100, 100, 100, 80, 50, 80, 80, 80, 50, 50, 20};
 	}
-
+	public static int napraviKombinacijuSastojaka (String [] niz, String sastojci) {
+		for (int i = 0; i < niz.length; i++) {
+			if (niz[i].equals(sastojci)) {
+				return i;
+			}
+		}
+		if (sastojci.equals("Poruci")) {
+			return 16;}
+		else {return 17;}
+	}
 }
