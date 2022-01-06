@@ -15,6 +15,30 @@ public class PastaBar {
 		"Slanina", "Piletina", "4 sira", "Dimljeni sir", "Parmezan", "Pavlaka", "Pesto sos",
 		"Napolitana", "Povrce mix", "Pecurke", "Kutija"};
 		int [] cene = {50, 60, 120, 120, 140, 100, 100, 100, 80, 50, 80, 80, 80, 50, 50, 20};
+		
+		int suma = 0;
+		int indeks = 0;
+		double popust = 0;
+		
+		while  (indeks != 16) {
+			System.out.println("Izaberite sastojak za pastu: ");
+			indeks = napraviKombinacijuSastojaka(niz, s.next()); 
+			if(indeks < 16) {
+			suma = suma + cene[indeks];
+			}
+		}
+		System.out.println("Unesite vas broj telefona: ");
+		
+		boolean klijent = musterije(stalneMusterije, s.next());
+		if (klijent) {
+			popust = (10.0 / 100) * suma;
+			System.out.println("Vasa pasta iznosi " + (suma-popust) + " rsd.");
+			System.out.println("Prijatno!!");
+		}else {
+			System.out.println("Vasa pasta iznosi " + suma + " rsd.");
+			System.out.println("Prijatno!!");
+		}
+		
 	}
 	public static int napraviKombinacijuSastojaka (String [] niz, String sastojci) {
 		for (int i = 0; i < niz.length; i++) {
