@@ -22,7 +22,7 @@ public class PastaBar {
 		
 		while  (indeks != 16) {
 			System.out.println("Izaberite sastojak za pastu: ");
-			indeks = napraviKombinacijuSastojaka(niz, s.next()); 
+			indeks = napraviKombinacijuSastojaka(niz, s.nextLine()); 
 			if(indeks < 16) {
 			suma = suma + cene[indeks];
 			}
